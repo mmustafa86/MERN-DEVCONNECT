@@ -9,7 +9,7 @@ const db= process.env.MONGODB
 const connectDB= async()=>{
 
     try{
-      await  mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true ,useCreateIndex:true});
+      await  mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true ,useCreateIndex:true ,useFindAndModify:false});
 
       console.log("MonogoDB Conntected....")
     } catch (err){
@@ -19,5 +19,10 @@ process.exit(1);
     }
 
 }
+
+
+
+
+
 
 module.exports= connectDB;
