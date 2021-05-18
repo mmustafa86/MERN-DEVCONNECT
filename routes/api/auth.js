@@ -9,6 +9,8 @@ const jwt= require('jsonwebtoken');
 require('dotenv').config()
 
 
+
+
 //@route  Get api/auth
 //@dec    Test route
 //@acess  Public
@@ -26,9 +28,6 @@ res.status(500).send('server Error')
 
 }
 
-
-
-    res.send('Auth route')
 })
 
 

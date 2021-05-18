@@ -26,8 +26,8 @@ req.user=decoded.user;
 next();
 
 }catch (err){
-
-res.status(401).json({msg: 'Token not valid'});
+    console.error('something wrong with auth middleware');
+    res.status(500).json({ msg: 'Server Error' });
 }
 
 
