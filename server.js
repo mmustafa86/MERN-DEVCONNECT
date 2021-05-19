@@ -1,6 +1,7 @@
 const express=require('express');
 const cors = require('cors')
 const connectDB=require('./config/db')
+var morgan = require('morgan')
 
 
 
@@ -11,7 +12,7 @@ const app=express();
 
 app.use(cors());
 
-
+app.use(morgan('tiny'));
 connectDB();
 
 
